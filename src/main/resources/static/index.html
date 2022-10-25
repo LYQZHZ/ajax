@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="getStudent()">获取一个学生</button>
+<div>
+    <span>学号：</span><span id="sno"></span><br>
+    <span>姓名：</span><span id="sname"></span><br>
+    <span>性别：</span><span id="ssex"></span><br>
+    <span>年龄：</span><span id="sage"></span><br>
+    <span>专业：</span><span id="smajor"></span><br>
+</div>
+<button onclick="SaveStudent()">保存一个学生</button>
+<script>
+    function getStudent(){
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                let stustr = xhr.responseText;
+                let stu = JSON.parse(stustr);
+                document.getElementById("sno").innerHTML = stu.sno;
+                document.getElementById("sname").innerHTML = stu.sname;
+                document.getElementById("ssex").innerHTML = stu.ssex;
+                document.getElementById("sage").innerHTML = stu.sage;
+                document.getElementById("smajor").innerHTML = stu.smajor;
+            }
+        };
+        xhr.open("GET", "/stu?sno=12345", true);
+        xhr.send();
+    }
+    function SaveStudent(){
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                let stustr = xhr.responseText;
+                console.log(stustr);
+            }
+        };
+        xhr.open("POST", "/stu", true);
+        let stu = {
+            sno:"12345",
+            sname:"张三",
+            ssex:"男",
+            sage:20,
+            smajor:"计算机科学",
+        }
+        let strStu = JSON.stringify(stu)
+        xhr.setRequestHeader("Content-type", "application/json");
+        xhr.send(strStu);
+    }
+</script>
+</body>
+</html>

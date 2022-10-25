@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                let div=$("#panel");
+                div.animate({height:'300px',opacity:'0.4'},"slow");
+                div.animate({width:'300px',opacity:'0.8'},"slow");
+                div.animate({height:'100px',opacity:'0.4'},"slow");
+                div.animate({width:'100px',opacity:'0.8'},"slow");
+                // $("#panel").slideToggle(5000);
+            });
+            $("#stop").click(function(){
+                $("#panel").stop(true);
+            });
+            $("#stop2").click(function(){
+                $("#panel").stop(true,true);
+            });
+            $("#stop3").click(function(){
+                $("#panel").stop();
+            });
+        });
+    </script>
+
+    <style>
+        #panel,#flip
+        {
+            padding:5px;
+            text-align:center;
+            background-color:#e5eecc;
+            border:solid 1px #c3c3c3;
+        }
+        #panel
+        {
+            padding:50px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+<button id="stop">停止滑动后结束此次动画队列</button>
+<button id="stop2">停止滑动后直接运行至动画结尾</button>
+<button id="stop3">停止滑动后停留在当前动画状态，再次点击继续该动画</button>
+<div id="flip">点击这里，向下滑动面板</div>
+<div id="panel">Hello world!</div>
+
+</body>
+</html>

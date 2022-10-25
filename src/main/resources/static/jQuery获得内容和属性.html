@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+<button id="getText">获取文本</button>
+<button id="getHtml">获取Html</button>
+<button id="getVal">获取内容</button>
+<button id="getAttr">获取属性值</button>
+<div id="div1">
+  <h1>标题</h1>
+  <p>文本文本文本文本文本文本文本文本</p>
+</div>
+<input type="text" id="input1" name="wsw"><hr>
+<button id="setText">设置文本</button>
+<button id="setHtml">设置Html</button>
+<button id="setVal">设置内容</button>
+<button id="setAttr">设置属性</button>
+<div id="div2">
+    <h1>标题</h1>
+    <p>文本文本文本文本文本文本文本文本</p>
+</div>
+<input type="text" id="input2" name="wsw">
+<script>
+  $(document).ready(function (){
+    $("#getText").click(function (){
+        let text = $("#div1").text();
+        alert(text);
+    });
+    $("#getHtml").click(function (){
+        let text = $("#div1").html();
+        alert(text);
+    })
+      $("#getVal").click(function (){
+          let text = $("#input1").val();
+          alert(text);
+      })
+      $("#getAttr").click(function (){
+          let text = $("#input1").attr("name");
+          alert(text);
+      })
+
+      $("#setText").click(function (){
+          let text = $("#div2").text("abcd");
+          alert(text);
+      });
+      $("#setHtml").click(function (){
+          let text = $("#div2").html("<h1>abcd</h1>");
+          alert(text);
+      })
+      $("#setVal").click(function (){
+          let text = $("#input2").val("1234");
+          alert(text);
+      })
+      $("#setAttr").click(function (){
+          let text = $("#div2").attr("style","color:yellow");
+          alert(text);
+      })
+
+
+  })
+</script>
+</body>
+</html>

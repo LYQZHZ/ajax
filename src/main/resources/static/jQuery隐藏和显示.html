@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="./js/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#hide").click(function(){
+        $("p").hide();
+      });
+      $("#show").click(function(){
+        $("p").show();
+      });
+    });
+
+    $(document).ready(function(){
+      $("#hidefortime").click(function(){
+        $(".hidden").hide(2000);
+      });
+      $("#showfortime").click(function(){
+        $(".hidden").show(2000);
+      });
+    });
+
+    $(document).ready(function(){
+      $(".transfrom").click(function(){
+        $(".transfrombyt").toggle(2000,xianshi());
+      });
+    });
+
+    function xianshi(){
+      alert(123456);
+    }
+  </script>
+</head>
+<body>
+<p id="p1">如果点击“隐藏”按钮，我就会消失。</p>
+<button id="hide" type="button">隐藏</button>
+<button id="show" type="button">显示</button><hr>
+<button type="button" id="hidefortime">隐藏</button>
+<button type="button" id="showfortime">显示</button>
+<p class="hidden">这是一个段落。</p>
+<p class="hidden">这是另一个段落。</p><hr>
+
+<button type="button" class="transfrom">切换</button>
+<p class="transfrombyt">这是一个段落。</p>
+<p class="transfrombyt">这是另一个段落。</p>
+</body>
+</html>

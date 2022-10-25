@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        .div1{
+            width: 500px;
+            height: 500px;
+            margin: 20px;
+            padding: 30px;
+            background-color: deepskyblue;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+<button id="getcommen">获取高度和宽度，不包括边框内边距和外边距</button>
+<div class="div1">1234</div>
+<script>
+    $(document).ready(function (){
+        $("#getcommen").click(function (){
+            console.log($(".div1").width())
+            console.log($(".div1").height())
+            console.log($(".div1").innerWidth())
+            console.log($(".div1").innerHeight())
+            console.log($(".div1").outerWidth())
+            console.log($(".div1").outerHeight())
+            console.log($(".div1").outerWidth(true))
+            console.log($(".div1").outerHeight(true))
+        })
+    })
+</script>
+</body>
+</html>

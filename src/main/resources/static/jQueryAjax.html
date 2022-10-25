@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryAjax</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+<div id="mydiv">123456</div>
+<button id="load1">jQuery_load_file</button>
+<button id="load2">jQuery_load_get</button>
+<button id="load3">jQuery_load_post</button>
+<button id="load4">jQuery_get</button>
+<button id="load5">jQuery_post</button>
+<button id="load6">jQuery_Ajax_get</button>
+<button id="load7">jQuery_Ajax_post</button>
+<p id="p1"></p>
+<p id="p2" style="color: red"></p>
+<script>
+    $(document).ready(function (){
+        $("#load1").click(function (){
+            $("#mydiv").load("./demo_test.txt",function (resp,status,xhr){
+                console.log(resp);
+                console.log(status);
+                console.log(xhr);
+            })
+        })
+        $("#load2").click(function (){
+            $("#mydiv").load("./jquery/hello?name=里斯",function (resp,status,xhr){
+                console.log(resp);
+                console.log(status);
+                console.log(xhr);
+            })
+        })
+        let data={
+            name:"张三",
+            say:"我叫你一声你敢答应码"
+        }
+        $("#load3").click(function (){
+            $("#mydiv").load("./jquery/hello",data,function (resp,status,xhr){
+                console.log(resp);
+                console.log(status);
+                console.log(xhr);
+            })
+        })
+        $("#load4").click(function (){
+            $.get("./jquery/hello?name=里斯",function (resp,status,xhr){
+                if (status == "success"){
+                    $("#p1").text(resp)
+                }
+                console.log(resp);
+                console.log(status);
+                console.log(xhr);
+            })
+        })
+
+        $("#load5").click(function (){
+            $.post("./jquery/hello",data,function (resp,status,xhr){
+                if (status == "success"){
+                    $("#p1").text(resp)
+                }
+                console.log(resp);
+                console.log(status);
+                console.log(xhr);
+            })
+        })
+
+        $("#load6").click(function (){
+            $.ajax({
+                async:true,
+                url:"./jquery/hello?name=里斯",
+                type:"get",
+                success:function (res){
+                    $("#p1").text(res)
+                },
+                error:function (res){
+                    $("#p1").text("请求失败")
+                }
+            }
+
+
+            )
+        })
+
+        $("#load7").click(function (){
+            $.ajax({
+                    async:true,
+                    url:"./jquery/hell",
+                    data:data,
+                    type:"post",
+                    success:function (res){
+                        $("#p1").text(res)
+                    },
+                    error:function (res){
+                        $("#p2").text("请求失败")
+                    }
+                }
+
+
+            )
+        })
+    })
+</script>
+</body>
+</html>

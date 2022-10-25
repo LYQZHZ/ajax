@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+<div>
+    <div id="util">
+        <div>
+            <h1>jQuery遍历父元素</h1>
+        </div>
+        <div>
+            <h1>jQuery遍历父元素</h1>
+            <p id="myp">文本文本文本文本文本文本文本文本</p>
+        </div>
+    </div>
+</div>
+<button id="pr">遍历父元素</button>
+<button id="prs">遍历祖先元素</button>
+<button id="pru">遍历父元素直到某一个指定元素</button>
+<button id="prsu">遍历祖先元素直到指定父元素</button>
+<hr>
+<div>
+    <div id="util2">
+        <div id="child1">
+            <h1>jQuery遍历子元素</h1>
+        </div>
+        <div>
+            <h1>jQuery遍历子元素</h1>
+            <p id="myp2">文本文本文本文本文本文本文本文本</p>
+        </div>
+    </div>
+</div>
+<button id="pr2">遍历直接子元素</button>
+<button id="prs2">遍历直接子元素中的指定元素</button>
+<button id="pru2">遍历指定元素的后代元素直到最后一个子元素</button>
+<button id="prsu2">遍历指定元素的后代元素中的所有h1元素</button>
+<hr>
+<div>
+    <div id="util3">
+        <div id="child13">
+            <h1>jQuery遍历同胞元素</h1>
+            <p id="myp31">文本文本文本文本文本文本文本文本</p>
+        </div>
+        <div id="child12">
+            <h1>jQuery遍历同胞元素</h1>
+            <p id="myp32">文本文本文本文本文本文本文本文本</p>
+        </div>
+        <div id="child11">
+            <h1>jQuery遍历同胞元素</h1>
+        </div>
+        <div>
+            <h1>jQuery遍历同胞元素</h1>
+            <p id="myp33">文本文本文本文本文本文本文本文本</p>
+        </div>
+        <div id="child14">
+            <h1>jQuery遍历同胞元素</h1>
+            <p id="myp34">文本文本文本文本文本文本文本文本</p>
+        </div>
+    </div>
+</div>
+<button id="pr3">遍历该元素的所有同胞元素</button>
+<button id="prs3">遍历该元素的所有同胞元素中指定的元素</button>
+<button id="pru3">遍历该元素的下一个同胞元素</button>
+<button id="prsu3">遍历该元素所有后面的同胞元素</button>
+<button id="prsuu3">遍历该元素到后面指定同胞元素之间的同胞元素</button>
+
+<button id="prev">遍历该元素的前一个同胞元素</button>
+<button id="prevall">遍历该元素所有前面的同胞元素</button>
+<button id="prevutil">遍历该元素到前面指定同胞元素之间的同胞元素</button>
+
+<hr>
+<div class="first">
+    <div id="util4">
+        <div id="child23">
+            <h1>jQuery遍历过滤</h1>
+            <p id="myp21">文本文本文本文本文本文本文本文本</p>
+        </div>
+        <div id="child22">
+            <h1>jQuery遍历过滤</h1>
+            <p id="myp42">文本文本文本文本文本文本文本文本</p>
+        </div>
+        <div id="child21" class="center">
+            <h1>jQuery遍历过滤</h1>
+        </div>
+        <div>
+            <h1>jQuery遍历过滤</h1>
+            <p id="myp43">文本文本文本文本文本文本文本文本</p>
+        </div>
+        <div id="child24">
+            <h1>jQuery遍历过滤</h1>
+            <p id="myp44">文本文本文本文本文本文本文本文本</p>
+        </div>
+    </div>
+    <div>1111</div>
+    <div>1111</div>
+</div>
+<button id="first">遍历指定元素的第一个元素</button>
+<button id="last">遍历指定元素的最后一个元素</button>
+<button id="eq">遍历指定元素的第i+1个元素</button>
+<button id="filter">遍历所有符合条件的元素</button>
+<button id="not">遍历该元素下所有不符合条件的元素</button>
+
+<script>
+    $(document).ready(function (){
+        $("#pr").click(function (){
+            $("#myp").parent().css("background-color","red")
+        })
+        $("#prs").click(function (){
+            $("#myp").parents().css("background-color","red")
+        })
+        $("#pru").click(function (){
+            $("#myp").parentsUntil("#util").css("background-color","red")
+        })
+        $("#prsu").click(function (){
+            $("#myp").parents("#util").css("background-color","red")
+        })
+
+        $("#pr2").click(function (){
+            $("#util2").children().css("background-color","red")
+        })
+        $("#prs2").click(function (){
+            $("#util2").children("#child1").css("background-color","red")
+        })
+        $("#pru2").click(function (){
+            $("#util2").find("*").css("background-color","red")
+        })
+        $("#prsu2").click(function (){
+            $("#util2").find("h1").css("background-color","red")
+        })
+
+        $("#pr3").click(function (){
+            $("#child11").siblings().css("background-color","red")
+        })
+        $("#prs3").click(function (){
+            $("#child11").siblings("#child12").css("background-color","red")
+        })
+        $("#pru3").click(function (){
+            $("#child11").next().css("background-color","red")
+        })
+        $("#prsu3").click(function (){
+            $("#child11").nextAll().css("background-color","red")
+        })
+        $("#prsuu3").click(function (){
+            $("#child13").nextUntil("#child14").css("background-color","red")
+        })
+        $("#prev").click(function (){
+            $("#child11").prev().css("background-color","red")
+        })
+        $("#prevall").click(function (){
+            $("#child11").prevAll().css("background-color","red")
+        })
+        $("#prevutil").click(function (){
+            $("#child14").prevUntil("#child12").css("background-color","red")
+        })
+
+
+        $("#first").click(function (){
+            $(".first>div").first().css("background-color","red")
+        })
+        $("#last").click(function (){
+            $(".first>div").last().css("background-color","red")
+        })
+        $("#eq").click(function (){
+            $(".first>div").eq(1).css("background-color","red")
+        })
+        $("#filter").click(function (){
+            $("div").filter(".center").css("background-color","red")
+        })
+        $("#not").click(function (){
+            $("div").not(".center").css("background-color","red")
+        })
+    })
+</script>
+</body>
+</html>

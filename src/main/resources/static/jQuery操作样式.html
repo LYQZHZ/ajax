@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+.blue{
+    color: yellow;
+    background-color: blue;
+}
+.big{
+    font-size: 30px;
+}
+    </style>
+</head>
+<body>
+<button id="addClass">向选定内容的类属性内添加类属性值</button>
+<button id="removeClass">向选定内容的类属性内删减类属性值</button>
+<button id="toggleClass">向选定内容的类属性内删减类属性值</button>
+<p>123456789</p>
+<div id="div1">
+    <h1>标题</h1>
+    <p class="p1 blue">文本文本文本文本文本文本文本文本1</p>
+    <p class="p2 blue big" name="pp">文本文本文本文本文本文本文本文本2</p>
+    <p class="p1 blue">文本文本文本文本文本文本文本文本1</p>
+    <p class="p3 blue big" name="pp">文本文本文本文本文本文本文本文本2</p>
+</div>
+<hr>
+<button id="getOneStyle">获取指定样式</button>
+<button id="setOneStyle">设置单个指定样式</button>
+<button id="setManyStyle">设置多个指定样式</button>
+<div id="div2">
+    <h1>标题</h1>
+    <p class="p4 blue">文本文本文本文本文本文本文本文本1</p>
+    <p class="p5 blue big" name="pp">文本文本文本文本文本文本文本文本2</p>
+    <p class="p6 blue">文本文本文本文本文本文本文本文本1</p>
+    <p class="p7 blue big" name="pp">文本文本文本文本文本文本文本文本2</p>
+</div>
+<script>
+$(document).ready(function (){
+    $("#addClass").click(function (){
+        $(".p1").addClass("big")
+    })
+    $("#removeClass").click(function (){
+        $(".p2").removeClass("blue")
+    })
+    $("#toggleClass").click(function (){
+        $(".p3").toggleClass("blue")
+    })
+
+
+    $("#getOneStyle").click(function (){
+        alert($(".p5").css("color"))
+    })
+    $("#setOneStyle").click(function (){
+        $(".p6").css({"background-color":"black"})
+    })
+    $("#setManyStyle").click(function (){
+        $(".p7").css({"background-color":"black","font-size":"50px"})
+    })
+})
+</script>
+</body>
+</html>

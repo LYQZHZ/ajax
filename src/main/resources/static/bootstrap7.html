@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active">
+    <a href="#home" >
+      菜鸟教程
+    </a>
+  </li>
+  <li><a href="#ios" >iOS</a></li>
+  <li class="dropdown">
+    <a href="#" id="myTabDrop1" class="dropdown-toggle"
+       data-toggle="dropdown">Java
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+      <li><a href="#jmeter" tabindex="-1">jmeter</a></li>
+      <li><a href="#ejb" tabindex="-1" >ejb</a></li>
+    </ul>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade in active" id="home">
+    <p>菜鸟教程是一个提供最新的web技术站点，本站免费提供了建站相关的技术文档，帮助广大web技术爱好者快速入门并建立自己的网站。菜鸟先飞早入行——学的不仅是技术，更是梦想。</p>
+  </div>
+  <div class="tab-pane fade" id="ios">
+    <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
+      TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+  </div>
+  <div class="tab-pane fade" id="jmeter">
+    <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
+  </div>
+  <div class="tab-pane fade" id="ejb">
+    <p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。
+    </p>
+  </div>
+</div>
+
+
+<h4>提示工具（Tooltip）插件 - 锚</h4>
+这是一个 <a href="#" class="tooltip-test" data-toggle="tooltip"
+        title="默认的 Tooltip">
+  默认的 Tooltip
+</a>.
+这是一个 <a href="#" class="tooltip-test" data-toggle="tooltip"
+        data-placement="left" title="左侧的 Tooltip">
+  左侧的 Tooltip
+</a>.
+这是一个 <a href="#" data-toggle="tooltip" data-placement="top"
+        title="顶部的 Tooltip">
+  顶部的 Tooltip
+</a>.
+这是一个 <a href="#" data-toggle="tooltip" data-placement="bottom"
+        title="底部的 Tooltip">
+  底部的 Tooltip
+</a>.
+这是一个 <a href="#" data-toggle="tooltip" data-placement="right"
+        title="右侧的 Tooltip">
+  右侧的 Tooltip
+</a>
+
+<br>
+
+<h4>提示工具（Tooltip）插件 - 按钮</h4>
+<button type="button" class="btn btn-default" data-toggle="tooltip"
+        title="默认的 Tooltip">
+  默认的 Tooltip
+</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip"
+        data-placement="left" title="左侧的 Tooltip">
+  左侧的 Tooltip
+</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip"
+        data-placement="top" title="顶部的 Tooltip">
+  顶部的 Tooltip
+</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip"
+        data-placement="bottom" title="底部的 Tooltip">
+  底部的 Tooltip
+</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip"
+        data-placement="right" title="右侧的 Tooltip">
+  右侧的 Tooltip
+</button>
+
+<div style="padding: 100px 100px 10px;">
+  这是一个 <a href="#" class="tooltip-show" data-toggle="tooltip"
+          title="show">Tooltip 方法 show
+</a>.
+
+  这是一个 <a href="#" class="tooltip-hide" data-toggle="tooltip"
+          data-placement="left" title="hide">Tooltip 方法 hide
+</a>.
+
+  这是一个 <a href="#" class="tooltip-destroy" data-toggle="tooltip"
+          data-placement="top" title="destroy">Tooltip 方法 destroy
+</a>.
+
+  这是一个 <a href="#" class="tooltip-toggle" data-toggle="tooltip"
+          data-placement="bottom" title="toggle">Tooltip 方法 toggle
+</a>.
+  <br><br><br><br><br><br>
+  <p class="tooltip-options" >
+    这是一个 <a href="#" data-toggle="tooltip" title="<h2>'am Header2
+         </h2>">Tooltip 方法 options
+  </a>.
+  </p>
+
+
+
+  <div class="container" style="padding: 100px 50px 10px;" >
+    <button type="button" class="btn btn-default" title="Popover title"
+            data-container="body" data-toggle="popover" data-placement="left"
+            data-content="左侧的 Popover 中的一些内容">
+      左侧的 Popover
+    </button>
+    <button type="button" class="btn btn-primary" title="Popover title"
+            data-container="body" data-toggle="popover" data-placement="top"
+            data-content="顶部的 Popover 中的一些内容">
+      顶部的 Popover
+    </button>
+    <button type="button" class="btn btn-success" title="Popover title"
+            data-container="body" data-toggle="popover" data-placement="bottom"
+            data-content="底部的 Popover 中的一些内容">
+      底部的 Popover
+    </button>
+    <button type="button" class="btn btn-warning" title="Popover title"
+            data-container="body" data-toggle="popover" data-placement="right"
+            data-content="右侧的 Popover 中的一些内容">
+      右侧的 Popover
+    </button>
+  </div>
+
+
+  <div class="container" style="padding: 100px 50px 10px;" >
+    <button type="button" class="btn btn-default popover-show"
+            title="Popover title" data-container="body"
+            data-toggle="popover" data-placement="left"
+            data-content="左侧的 Popover 中的一些内容 —— show 方法">
+      左侧的 Popover
+    </button>
+    <button type="button" class="btn btn-primary popover-hide"
+            title="Popover title" data-container="body"
+            data-toggle="popover" data-placement="top"
+            data-content="顶部的 Popover 中的一些内容 —— hide 方法">
+      顶部的 Popover
+    </button>
+    <button type="button" class="btn btn-success popover-destroy"
+            title="Popover title" data-container="body"
+            data-toggle="popover" data-placement="bottom"
+            data-content="底部的 Popover 中的一些内容 —— destroy 方法">
+      底部的 Popover
+    </button>
+    <button type="button" class="btn btn-warning popover-toggle"
+            title="Popover title" data-container="body"
+            data-toggle="popover" data-placement="right"
+            data-content="右侧的 Popover 中的一些内容 —— toggle 方法">
+      右侧的 Popover
+    </button><br><br><br><br><br><br>
+    <p class="popover-options">
+      <a href="#" type="button" class="btn btn-warning" title="<h2>Title</h2>"
+         data-container="body" data-toggle="popover" data-content="
+         <h4>Popover 中的一些内容 —— options 方法</h4>">
+        Popover
+      </a>
+    </p>
+    <script>
+      $(function () { $('.popover-show').popover('show');});
+      $(function () { $('.popover-hide').popover('hide');});
+      $(function () { $('.popover-destroy').popover('destroy');});
+      $(function () { $('.popover-toggle').popover('toggle');});
+      $(function () { $(".popover-options a").popover({html : true });});
+    </script>
+  </div>
+  <script>
+    $(function (){
+      $("[data-toggle='popover']").popover();
+    });
+  </script>
+</div>
+  <script>
+    $(function () { $('.tooltip-show').tooltip('show');});
+    $(function () { $('.tooltip-hide').tooltip('hide');});
+    $(function () { $('.tooltip-destroy').tooltip('destroy');});
+    $(function () { $('.tooltip-toggle').tooltip('toggle');});
+    $(function () { $(".tooltip-options a").tooltip({html : true });
+    });
+  </script>
+</div>
+
+
+<div class="alert alert-info">
+  <a href="#" class="close" data-dismiss="alert">
+    &times;
+  </a>
+  <strong>警告！</strong>您的网络连接有问题。
+</div>
+<div class="alert alert-warning">
+  <a href="#" class="close" data-dismiss="alert">
+    &times;
+  </a>
+  <strong>警告！</strong>您的网络连接有问题。
+</div>
+<div class="alert alert-success">
+  <a href="#" class="close" data-dismiss="alert">
+    &times;
+  </a>
+  <strong>警告！</strong>您的网络连接有问题。
+</div>
+<div class="alert alert-danger">
+  <a href="#" class="close" data-dismiss="alert">
+    &times;
+  </a>
+  <strong>警告！</strong>您的网络连接有问题。
+</div>
+
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion"
+           href="#collapseOne">
+          点击我进行展开，再次点击我进行折叠。第 1 部分
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+        vice lomo.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion"
+           href="#collapseTwo">
+          点击我进行展开，再次点击我进行折叠。第 2 部分
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+        vice lomo.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion"
+           href="#collapseThree">
+          点击我进行展开，再次点击我进行折叠。第 3 部分
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+        vice lomo.
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function () { $("[data-toggle='tooltip']").tooltip(); });
+</script>
+<script>
+  $(function () {
+    $("#myTab a").click(function () {
+      if(this.id != "myTabDrop1"){
+        $(this).tab('show')
+      }
+    })
+  })
+</script>
+</body>
+</html>

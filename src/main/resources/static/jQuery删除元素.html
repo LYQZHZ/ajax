@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery删除元素</title>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+<button id="removeall">删除选定的内容包括自身</button>
+<button id="removechild">删除选定的内容只包括该元素的子元素</button>
+<p>123456789</p>
+<div id="div1">
+  <h1>标题</h1>
+  <p>文本文本文本文本文本文本文本文本</p>
+</div>
+<hr>
+
+<button id="removesome1">删除选定的内容内的部分内容</button>
+<button id="removesome2">删除选定的内容内的部分内容</button>
+<div id="div2">
+    <h1>标题</h1>
+    <p class="p1">文本文本文本文本文本文本文本文本1</p>
+    <p class="p2" name="pp">文本文本文本文本文本文本文本文本2</p>
+    <p class="p1">文本文本文本文本文本文本文本文本1</p>
+    <p class="p2" name="pp">文本文本文本文本文本文本文本文本2</p>
+</div>
+<script>
+    $(document).ready(function (){
+        $("#removeall").click(function (){
+            $("#div1").remove()
+        })
+        $("#removechild").click(function (){
+            $("#div1").empty()
+        })
+
+        $("#removesome1").click(function (){
+            $("#div2>p").remove(".p1")
+        })
+        $("#removesome2").click(function (){
+            $("#div2>p").remove("[name]")
+        })
+    })
+</script>
+</body>
+</html>

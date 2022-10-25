@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="./js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $("div").animate({left:'250px'});
+            });
+            $("#button2").click(function(){
+                $("div").animate({
+                    left:'250px',
+                    opacity:'0.5',
+                    height:'150px',
+                    width:'150px'
+                });
+            });
+            $("#button3").click(function(){
+                $("div").animate({
+                    left:'250px',
+                    height:'+=150px',
+                    width:'+=150px'
+                });
+            });
+            $("#button4").click(function(){
+                $("div").animate({
+                    height:'toggle'
+                });
+            });
+            $("#button5").click(function(){
+                let div=$("div");
+                div.animate({height:'300px',opacity:'0.4'},"slow");
+                div.animate({width:'300px',opacity:'0.8'},"slow");
+                div.animate({height:'100px',opacity:'0.4'},"slow");
+                div.animate({width:'100px',opacity:'0.8'},"slow");
+            });
+            $("#button6").click(function(){
+                let div=$("div");
+                div.animate({left:'100px'},"slow");
+                div.animate({fontSize:'2em'},"slow");
+                div.animate({background:'#ffff00'},"slow");
+            });
+        });
+
+        function xianshi(){
+            alert(123456);
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+<button id="button1">开始动画</button>
+<button id="button2">改变多个属性值</button>
+<button id="button3">改变多个属性值的相对值</button>
+<button id="button4">将属性值设置为toggle以实现该属性值的显示和隐藏的切换</button>
+<button id="button5">以内部队列形式依次执行动画</button>
+<button id="button6">以内部队列形式依次执行动画改变位置之后改变字号</button>
+<p>默认情况下，所有 HTML 元素的位置都是静态的，并且无法移动。如需对位置进行操作，记得首先把元素的 CSS position 属性设置为 relative、fixed 或 absolute。</p>
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;">HELLO
+</div>
+</body>
+</html>

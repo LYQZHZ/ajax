@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--导入Bootstrap的CSS库-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!--使用CSS有两种思维方式：（1）设置某个元素的样式为....(2)让某个元素采用某种样式-->
+    <!--Bootstrap不仅是CSS库，还有JS插件，这些JS插件基于bootstrap.min.js-->
+    <!--bootstrap.min.js 基于jQuery的，也就是说依赖于jQuery-->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!--导航条 id="navbar-example"-->
+    <nav id="my-navbar" class="nav navbar navbar-default">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+                <ul class="nav navbar-nav">
+                    <li><a href="#a">AAAAAAAAA</a></li>
+                    <li><a href="#b">BBBBBBBBB</a></li>
+                    <li><a href="#c">CCCCCCCCC</a></li>
+                    <li><a href="#d">DDDDDDDDD</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--滚动内容
+        data-spy="scroll"  实现滚动监听
+        data-target="#my-navbar"  监听到滚动时，要影响的导航条
+        style="height:600px;overflow:auto; position:relative;"   设置内容的高度，当内容溢出时出现滚动条
+
+    -->
+    <div data-spy="scroll" data-target="#my-navbar"
+        style="height:600px;overflow:auto; position:relative;">
+        <h2 id="a">AAAAAA</h2>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <h2 id="b">BBBBBB</h2>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <h2 id="c">CCCCCC</h2>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
+        <h2 id="d">dddddddd</h2>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+        <p>ddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+    </div>
+</body>
+
+</html>
